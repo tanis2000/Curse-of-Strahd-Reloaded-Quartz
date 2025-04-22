@@ -1,3 +1,150 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+:root[saved-theme=dark] .image-light,
+:root[saved-theme=light] .image-dark
+{
+    display: none;
+}
+
+:root[saved-theme=dark]
+{
+    --highlight-primary: #FFC107;
+    --highlight-secondary: #d697e9;
+    --highlight-friendly: #d79eff;
+    --highlight-neutral: #d8d8d8;
+    --highlight-warning: #ff8725;
+    --highlight-cold: #5fdfff;
+    --highlight-bright: #68ff4a;
+    --highlight-interesting: #ff83ea;
+    --highlight-design: #ff6262; 
+    --highlight-combat: #ff6262; 
+    --custom-background-primary: #362a004d;
+    --custom-background-friendly: #31065034;
+    --custom-background-neutral: #292929;
+    --custom-background-warning: #642d0046;
+    --custom-background-cold: #00354244;
+    --custom-background-bright: #0d4e0042;
+    --custom-background-interesting: #33002a34;
+    --custom-background-design: #3600003a;
+    --custom-background-combat: #3600003a;
+}
+
+strong,
+.page article p>strong,
+h1, h2, h3, h4, h5, h6 {
+    color: var(--highlight-primary);
+}
+
+a {
+    color: var(--highlight-secondary);
+}
+
+.page article h2 {
+    border-bottom: 1px solid var(--highlight-primary) !important;
+}
+
+.callout-content {
+    font-size: 1em;
+  }
+
+  .callout-content p:first-child {
+    margin-top: 0px;
+  }
+
+  .callout-content p:last-child {
+    margin-bottom: 5px;
+  }
+
+.callout[data-callout="info"] {
+    --highlight: var(--highlight-neutral);
+    --background: var(--custom-background-neutral);
+  }
+
+  .callout[data-callout="tip"] {
+    --highlight: var(--highlight-friendly);
+    --background: var(--custom-background-friendly);
+  }
+
+  .callout[data-callout="profile"] {
+    --callout-color: 0, 0, 0; 
+    --callout-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXIiPjxwYXRoIGQ9Ik0xOSAyMXYtMmE0IDQgMCAwIDAtNC00SDlhNCA0IDAgMCAwLTQgNHYyIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSI3IiByPSI0Ii8+PC9zdmc+");
+    --highlight: var(--highlight-friendly);
+    --background: var(--custom-background-friendly);
+  }
+
+  .callout[data-callout="combat"] {
+    --callout-color: 0, 0, 0; 
+    --callout-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN3b3JkcyI+PHBvbHlsaW5lIHBvaW50cz0iMTQuNSAxNy41IDMgNiAzIDMgNiAzIDE3LjUgMTQuNSIvPjxsaW5lIHgxPSIxMyIgeDI9IjE5IiB5MT0iMTkiIHkyPSIxMyIvPjxsaW5lIHgxPSIxNiIgeDI9IjIwIiB5MT0iMTYiIHkyPSIyMCIvPjxsaW5lIHgxPSIxOSIgeDI9IjIxIiB5MT0iMjEiIHkyPSIxOSIvPjxwb2x5bGluZSBwb2ludHM9IjE0LjUgNi41IDE4IDMgMjEgMyAyMSA2IDE3LjUgOS41Ii8+PGxpbmUgeDE9IjUiIHgyPSI5IiB5MT0iMTQiIHkyPSIxOCIvPjxsaW5lIHgxPSI3IiB4Mj0iNCIgeTE9IjE3IiB5Mj0iMjAiLz48bGluZSB4MT0iMyIgeDI9IjUiIHkxPSIxOSIgeTI9IjIxIi8+PC9zdmc+");
+    --highlight: var(--highlight-combat);
+    --background: var(--custom-background-combat);
+  }
+
+  .callout[data-callout="warning"] {
+    --highlight: var(--highlight-warning);
+    --background: var(--custom-background-warning);
+  }
+
+  .callout[data-callout="abstract"] {
+    --highlight: var(--highlight-bright);
+    --background: var(--custom-background-bright);
+  }
+
+  .callout[data-callout="lore"] {
+    --callout-color: 0, 0, 0; 
+    --callout-icon: url("data:image/svg+xml; utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-book'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20'%3E%3C/path%3E%3C/svg%3E");
+    --highlight: var(--highlight-cold);
+    --background: var(--custom-background-cold);
+  }
+
+  .callout[data-callout="item"] {
+    --callout-color: 0, 0, 0; 
+    --callout-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWdlbSI+PHBhdGggZD0iTTYgM2gxMmw0IDYtMTAgMTNMMiA5WiIvPjxwYXRoIGQ9Ik0xMSAzIDggOWw0IDEzIDQtMTMtMy02Ii8+PHBhdGggZD0iTTIgOWgyMCIvPjwvc3ZnPg==");
+    --highlight: var(--highlight-interesting);
+    --background: var(--custom-background-interesting);
+  }
+
+  .callout[data-callout="design"] {
+    --callout-color: 0, 0, 0; 
+    --callout-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXdyZW5jaCI+PHBhdGggZD0iTTE0LjcgNi4zYTEgMSAwIDAgMCAwIDEuNGwxLjYgMS42YTEgMSAwIDAgMCAxLjQgMGwzLjc3LTMuNzdhNiA2IDAgMCAxLTcuOTQgNy45NGwtNi45MSA2LjkxYTIuMTIgMi4xMiAwIDAgMS0zLTNsNi45MS02LjkxYTYgNiAwIDAgMSA3Ljk0LTcuOTRsLTMuNzYgMy43NnoiLz48L3N2Zz4=");
+    --highlight: var(--highlight-design);
+    --background: var(--custom-background-design);
+  }
+
+  .callout {
+    border: 4px solid var(--highlight) !important;
+    border-radius: 15px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    background-color: var(--background) !important;
+    mix-blend-mode: normal !important;
+    border-radius: 15px;
+  }
+
+  .callout .callout-content em,
+  .callout .callout-title-inner strong,
+  .callout .callout-content strong,
+  .callout .callout-content hr,
+  .callout .callout-icon svg,
+  .callout .callout-title .callout-icon,
+  .callout .callout-fold svg {
+    color: var(--highlight) !important;
+    stroke: var(--highlight) !important;
+  }
+
+  .callout .callout-title .callout-icon {
+    background-color: var(--highlight) !important;
+  }
+
+  a {
+    background-color: var(--background) !important;
+  }
+
+.description {
+  border: 4px solid var(--highlight-primary);
+  border-radius: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: var(--custom-background-primary) !important;
+}
